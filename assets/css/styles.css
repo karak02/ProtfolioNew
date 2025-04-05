@@ -228,6 +228,7 @@ body.dark-theme{
   background-color: var(--body-color);
   top: 0;
   left: 0;
+  padding: 5px;
   z-index: var(--z-fixed);
   transition: box-shadow 0.4s,background-color .4s;
 }
@@ -792,6 +793,7 @@ body.dark-theme{
   padding: 5rem 1.5rem 2.5rem;
   margin-top: -2.5rem;
   transition: background-color .4s;
+  
 }
 .contact__title{
   color: var(--white-color);
@@ -1304,7 +1306,7 @@ body.dark-theme{
   }
   .projects__container{
     grid-template-columns: repeat(3,352px);
-    padding-block: 3rem 1rem;
+    padding-block: 1.5rem 1rem;
   }
   .projects__card{
     padding: 1.25rem 1.25rem 2.5rem;
@@ -1334,7 +1336,7 @@ body.dark-theme{
     text-align: initial;
   }
   .contact__box{
-    height: 60px;
+    height: 100px;
   }
   .contact__from .contact__area{
     height: 11rem;
