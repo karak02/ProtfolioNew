@@ -20,7 +20,7 @@
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Bai Jamjuree", sans-serif;
-  --biggest-font-size: 2.5rem;
+  --biggest-font-size: 3.5rem;
   --h1-font-size: 1.75rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
@@ -130,7 +130,7 @@ body.dark-theme{
   filter: none;
 }
 .dark-theme .home__description b{
-  background: linear-gradient(90deg, hsla(14, 98%, 50%,.2), hsla(14, 98%, 50%,.4));
+  background: linear-gradient(90deg, hsla(14, 98%, 50%,.3), hsla(14, 98%, 50%,0));
 }
 .dark-theme :is(.button__ghost,.service__icon i){
   color: var(--white-color);
@@ -228,7 +228,6 @@ body.dark-theme{
   background-color: var(--body-color);
   top: 0;
   left: 0;
-  padding: 5px;
   z-index: var(--z-fixed);
   transition: box-shadow 0.4s,background-color .4s;
 }
@@ -238,6 +237,7 @@ body.dark-theme{
   justify-content: space-between;
   height: var(--header-height);
   align-items: center;
+  padding: 10px;
 }
 
 .nav__logo{
@@ -272,7 +272,7 @@ body.dark-theme{
     position: fixed;
     top: -100%;
     left: 0;
-    background-color: hsla(0, 0, 0, .75);
+    background-color: hsla(0, 3%, 14%, 0.674);
     width: 100%;
     padding-block: 1.8rem 5rem;
     text-align: center;
@@ -300,12 +300,12 @@ body.dark-theme{
   font-size: var(--h2-font-size);
 }
 .nav__name::after,
-.nave__name::before{
+.nav__name::before{
   content: "";
-  position: absolute;
   width: 40px;
   height: 1px;
   background-color: var(--text-color-light);
+  position: absolute;
   top: 50%;
   left: -4rem;
 }
@@ -362,7 +362,7 @@ body.dark-theme{
 
 /* Add shadow header */
 .shadow-header{
-  box-shadow: 0 1px 12px hsla(0, 0%, 0%,.12);
+  box-shadow: 0 1px 12px hsla(0, 0%, 0%, 0.173);
 }
 
 /* Active link */
@@ -378,7 +378,7 @@ body.dark-theme{
   padding-top: 2rem;
 }
 .home__name{
-  font-size: var(__biggest-font-size);
+  font-size: var(--biggest-font-size);
   text-align: center;
 }
 
@@ -387,7 +387,7 @@ body.dark-theme{
   justify-self: center;
 }
 .home__image{
-  width: 200px;
+  width: 220px;
 }
 
 .home__img{
@@ -397,13 +397,13 @@ body.dark-theme{
 
 .home__shadow{
   width: 100%;
-  height: 100%;
+  height: 80%;
   background-color: var(--container-color);
   position: absolute;
-  bottom: -.75rem;
-  right: -.75rem;
-  broder: 4px solid var(--container-color);
-  z-index: 5;
+  bottom: -2rem;
+  right: -1rem;
+  border: 4px solid var(--black-color);
+  z-index: -1;
 }
 
 .home__arrow,
@@ -419,11 +419,12 @@ body.dark-theme{
 }
 
 .home__line{
-  right: -2rem;
-  bottom: -5rem;
+  right: -2.5rem;
+  bottom: -1rem;
+  z-index: -5;
 }
 .home__perfil .geometric-box{
-  top: 2.5rem;
+  top: 6rem;
   left: -.7rem;
   z-index: 10;
 }
@@ -444,7 +445,7 @@ body.dark-theme{
   padding: .25rem;
   display: grid;
   place-items: center;
-  border-radius: 3rem;
+ 
   transition: background-color .4s;
 }
 
@@ -462,7 +463,9 @@ body.dark-theme{
 }
 
 .home__description b{
-  background: liner-gradient(90deg, hsla(14, 98%, 50%,.2), hsla(14, 98%, 50%,.4));
+  background: linear-gradient(90deg, 
+             hsla(14, 98%, 50%,.3),
+             hsla(14, 98%, 50%,0));
 }
 .home__scroll{
   display:block;
@@ -512,12 +515,7 @@ body.dark-theme{
   justify-self: center;
   column-gap: .5rem; 
 }
-.button i{
-  font-size:  1.25rem
-}
-.button:hover{
-  background-color: var(--first-color);
-}
+
 .button{
   background-color: var(--black-color);
   color: var(--white-color);
@@ -525,17 +523,23 @@ body.dark-theme{
   font-weight: var(--font-medium);
   transform: background-color .4s;
 }
+.button i{
+  font-size:  1.25rem
+}
+.button:hover{
+  background-color: var(--first-color);
+}
 .button__ghost{
-  broder: 3px solid var(--black-color);
+  border: 3px solid var(--black-color);
   color: var(--black-color);
   padding: .5rem;
-  transition: broder .4s, color .4s;
+  transition: border .4s, color .4s;
 }
 .button__ghost i{
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .button__ghost:hover{
-	broder: 3px solid var(--first-color);
+	border: 3px solid var(--first-color);
 }
 
 /*=============== ABOUT ===============*/
@@ -584,7 +588,7 @@ body.dark-theme{
   right: -1.25rem;
   top: 6rem;
   width: 50px;
-  transition: filter.4s;
+  transition: filter .4s;
 }
 .about__box{
   width: 40px;
@@ -622,7 +626,7 @@ body.dark-theme{
   align-items: center;
 }
 /*=============== SERVICES ===============*/
-.services-container{
+.services__container{
   grid-template-columns: 250px;
   justify-content: center;
   row-gap: 2rem;
@@ -638,18 +642,18 @@ body.dark-theme{
   padding: 6rem 1rem 3rem;
   z-index: 5;
   position: relative;
-  transition: background-color .4s, border 4s;
+  transition: background-color .4s, border .4s;
 }
 .services__border{
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
   border: 4px solid var(--first-color);
   top: 0;
   left: 0;
   transition: transform .4s;
 }
-.services__card:hover .services__border{
+.services__card:hover .services__b{
   transform: translate(.75rem,.75rem);
 }
 .services__icon{
@@ -667,8 +671,7 @@ body.dark-theme{
   width: 24px;
   height: 24px;
   background-color: var(--first-color);
-  top: -2px;
-  right: -2px;
+  
 }
 .services__title{
   font-size: var(--h2-font-size);
@@ -1143,8 +1146,8 @@ body.dark-theme{
     width: 350px; 
   }
   .home__shadow{
-    right: -1.22rem;
-    bottom: -1.25rem;
+    right: 1.22rem;
+    bottom: 1.25rem;
     border: 6px solid var(--black-color);
   }
   .home__name,
