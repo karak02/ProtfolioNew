@@ -58,6 +58,8 @@ const sendEmail = (e) =>{
        // Clear input fields
        contactForm.reset()
 
+    },()=>{
+        contactMessage.textContent = 'Message not sent (service error) ❌'
     })
 }
 contactForm.addEventListener('submit', sendEmail)
