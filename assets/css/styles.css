@@ -1312,8 +1312,6 @@ body.dark-theme{
   .projects__container{
     grid-template-columns: repeat(3,352px);
     padding-block: 1.5rem 1rem;
-    width: 2rem;
-    height: 2rem;
   }
   .projects__card{
     padding: 1.25rem 1.25rem 2.5rem;
