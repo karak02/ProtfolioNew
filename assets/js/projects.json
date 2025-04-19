@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "image": "assets/img/project-1.png",
+      "subtitle": "Website",
+      "title": "Portfolio",
+      "description": "Designed and developed a fully responsive personal portfolio website to effectively showcase my projects, skills, and expertise. The website adheres to modern web standards using HTML5, CSS3, and JavaScript, ensuring a clean, professional appearance.",
+      "github": "https://github.com/karak02/ProtfolioNew",
+      "demo": "https://protfolio-new-three.vercel.app/#"
+    },
+    {
+      "id": 2,
+      "image": "assets/img/project-2.png",
+      "subtitle": "Frontend",
+      "title": "Dashboard",
+      "description": "Basically use here Front-End part using Next.js.",
+      "github": "https://github.com/karak02/Dashboard",
+      "demo": "https://dashboard-ebon-eight-47.vercel.app/#"
+    },
+    {
+      "id": 3,
+      "image": "assets/img/project-3.png",
+      "subtitle": "Frontend",
+      "title": "Landing page",
+      "description": "This is the simple landing page using React.",
+      "github": "https://github.com/karak02/landingpage",
+      "demo": "https://landingpage-five-ochre.vercel.app/"
+    },
+    {
+        "id": 4,
+        "image": "assets/img/project-4.png",
+        "subtitle": "Fullstack",
+        "title": "Redis chat app",
+        "description": "This is the chat app using Nextjs,Redis,scoket.io.",
+        "github": "https://github.com/karak02/redischatapp",
+        "demo": "https://redischatapp.vercel.app/auth"
+      }
+  ]
+}

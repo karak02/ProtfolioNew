@@ -73,6 +73,47 @@ const scrollUp = () =>{
 }
 window.addEventListener('scroll', scrollUp)
 
+/*=============== LOAD PROJECTS ===============*/
+const loadProjects = async () => {
+  try {
+    const response = await fetch('assets/js/projects.json');
+    const data = await response.json();
+    const projectsContainer = document.getElementById('projectsContainer');
+
+    data.projects.forEach(project => {
+      const projectCard = `
+        <article class="projects__card">
+          <div class="projects__image">
+            <img src="${project.image}" alt="${project.title}" class="projects__img">
+            <a href="${project.demo}" class="peojects__button button">
+              <i class="ri-arrow-right-up-line"></i>
+            </a>
+          </div>
+          <div class="projects__content">
+            <h3 class="projects__subtitle">${project.subtitle}</h3>
+            <h2 class="projects__title">${project.title}</h2>
+            <p class="projects__description">${project.description}</p>
+          </div>
+          <div class="projects__buttons">
+            <a href="${project.github}" target="_blank" class="projects__link">
+              <i class="ri-github-line"></i>view
+            </a>
+            <a href="${project.demo}" target="_blank" class="projects__link">
+              <i class="ri-dribbble-line"></i>view
+            </a>
+          </div>
+        </article>
+      `;
+      projectsContainer.innerHTML += projectCard;
+    });
+  } catch (error) {
+    console.error('Error loading projects:', error);
+  }
+};
+
+// Load projects when the DOM is ready
+document.addEventListener('DOMContentLoaded', loadProjects);
+
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
 
