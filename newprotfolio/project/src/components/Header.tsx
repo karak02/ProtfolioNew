@@ -23,7 +23,7 @@ const Header: React.FC = () => {
           <Link to="/" className="text-xl font-bold text-gray-900 dark:text-white">
             <motion.span 
               whileHover={{ scale: 1.05 }}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+              className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent"
             >
               Portfolio
             </motion.span>
@@ -37,15 +37,15 @@ const Header: React.FC = () => {
                 to={item.path}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                   location.pathname === item.path
-                    ? 'text-blue-600 dark:text-blue-400'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                    ? 'text-orange-600 dark:text-orange-400'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400'
                 }`}
               >
                 {item.label}
                 {location.pathname === item.path && (
                   <motion.div
                     layoutId="underline"
-                    className="absolute left-0 right-0 bottom-0 h-0.5 bg-blue-600 dark:bg-blue-400"
+                    className="absolute left-0 right-0 bottom-0 h-0.5 bg-orange-600 dark:bg-orange-400"
                   />
                 )}
               </Link>
@@ -88,8 +88,8 @@ const Header: React.FC = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`block px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                     location.pathname === item.path
-                      ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800'
+                      ? 'text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/20'
+                      : 'text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-gray-50 dark:hover:bg-gray-800'
                   }`}
                 >
                   {item.label}
