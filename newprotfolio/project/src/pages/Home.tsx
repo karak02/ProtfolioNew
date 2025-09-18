@@ -71,6 +71,24 @@ const Home: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Profile Photo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-8"
+            >
+              <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-6">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full animate-pulse"></div>
+                <img
+                  src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  alt="Profile"
+                  className="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-xl"
+                />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-t from-blue-600/20 to-transparent"></div>
+              </div>
+            </motion.div>
+
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               <span className="block">AI Automation Engineer</span>
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">

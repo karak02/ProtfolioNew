@@ -61,6 +61,22 @@ const About: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
+            {/* Profile Photo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-8"
+            >
+              <div className="relative w-24 h-24 md:w-32 md:h-32 mx-auto mb-6">
+                <img
+                  src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  alt="Profile"
+                  className="w-full h-full object-cover rounded-full border-3 border-blue-200 dark:border-blue-800 shadow-lg"
+                />
+              </div>
+            </motion.div>
+
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               About Me
             </h1>
