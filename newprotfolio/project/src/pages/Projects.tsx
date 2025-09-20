@@ -18,73 +18,140 @@ const Projects: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<string>('All');
 
   const projects: Project[] = [
-    {
-      id: 1,
-      title: 'AI-Powered Task Manager',
-      description: 'A smart task management application that uses AI to prioritize tasks, predict completion times, and automate workflow optimization.',
-      category: 'AI Automation',
-      techStack: ['React', 'Node.js', 'OpenAI API', 'MongoDB', 'TypeScript'],
-      image: 'https://images.pexels.com/photos/5483077/pexels-photo-5483077.jpeg?auto=compress&cs=tinysrgb&w=800',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'E-Commerce Platform',
-      description: 'Full-featured e-commerce platform with real-time inventory, payment processing, and advanced analytics dashboard.',
-      category: 'Fullstack',
-      techStack: ['Next.js', 'PostgreSQL', 'Stripe', 'Tailwind CSS', 'Prisma'],
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
-      featured: true
-    },
-    {
-      id: 3,
-      title: 'Data Visualization Dashboard',
-      description: 'Interactive dashboard for complex data analysis with real-time charts, filtering, and export capabilities.',
-      category: 'Frontend',
-      techStack: ['React', 'D3.js', 'Chart.js', 'TypeScript', 'Material-UI'],
-      image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
-      featured: false
-    },
-    {
-      id: 4,
-      title: 'Microservices API Gateway',
-      description: 'Scalable API gateway with authentication, rate limiting, and service discovery for microservices architecture.',
-      category: 'Backend',
-      techStack: ['Node.js', 'Express', 'Redis', 'Docker', 'JWT'],
-      image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Content Generation Bot',
-      description: 'AI-powered bot that generates social media content, schedules posts, and analyzes engagement metrics automatically.',
-      category: 'AI Automation',
-      techStack: ['Python', 'OpenAI API', 'FastAPI', 'Celery', 'PostgreSQL'],
-      image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
-      featured: true
-    },
-    {
-      id: 6,
-      title: 'Real-time Chat Application',
-      description: 'Modern chat application with real-time messaging, file sharing, video calls, and advanced group management.',
-      category: 'Fullstack',
-      techStack: ['React', 'Socket.io', 'Node.js', 'MongoDB', 'WebRTC'],
-      image: 'https://images.pexels.com/photos/1591060/pexels-photo-1591060.jpeg?auto=compress&cs=tinysrgb&w=800',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
-      featured: false
-    }
-  ];
+  {
+    id: 1,
+    title: 'NeoPost - Image Generation Tool',
+    description: 'A full-stack image generation platform with customizable templates, AI-driven enhancements, and social-ready exports.',
+    category: 'Fullstack',
+    techStack: ['Next.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'TypeScript'],
+    image: 'https://images.pexels.com/photos/5483077/pexels-photo-5483077.jpeg?auto=compress&cs=tinysrgb&w=800',
+    githubUrl: 'https://github.com',
+    liveUrl: 'https://demo.com',
+    featured: true
+  },
+  {
+    id: 2,
+    title: 'Real-time Chat Bot',
+    description: 'A real-time chat application with AI integration, enabling instant messaging, live support, and conversational automation.',
+    category: 'Fullstack',
+    techStack: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'WebRTC'],
+    image: 'https://images.pexels.com/photos/1591060/pexels-photo-1591060.jpeg?auto=compress&cs=tinysrgb&w=800',
+    githubUrl: 'https://github.com',
+    liveUrl: 'https://demo.com',
+    featured: true
+  },
+  {
+    id: 3,
+    title: 'NeoCrawl - Web Scraper',
+    description: 'Automated web scraper that collects structured data from multiple sources for analysis and AI pipelines.',
+    category: 'Backend',
+    techStack: ['Node.js', 'Puppeteer', 'Express', 'MongoDB'],
+    image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
+    githubUrl: 'https://github.com',
+    liveUrl: 'https://demo.com',
+    featured: false
+  },
+  {
+    id: 4,
+    title: 'NeoGeo - Map Scraper',
+    description: 'Geolocation data scraper for extracting business and location insights directly from maps.',
+    category: 'Backend',
+    techStack: ['Python', 'FastAPI', 'Selenium', 'PostgreSQL'],
+    image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
+    githubUrl: 'https://github.com',
+    liveUrl: 'https://demo.com',
+    featured: false
+  },
+  {
+    id: 5,
+    title: 'Invoice Generator',
+    description: 'Automated invoice generator with PDF export, tax calculation, and client record management.',
+    category: 'Backend',
+    techStack: ['Node.js', 'Express', 'PDFKit', 'MySQL'],
+    image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800',
+    githubUrl: 'https://github.com',
+    liveUrl: 'https://demo.com',
+    featured: false
+  },
+  {
+    id: 6,
+    title: 'LangChain FAQ Chatbot',
+    description: 'An AI-powered FAQ bot built with LangChain for dynamic query answering and knowledge base integration.',
+    category: 'AI Automation',
+    techStack: ['LangChain', 'Python', 'FastAPI', 'VectorDB'],
+    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
+    githubUrl: 'https://github.com',
+    liveUrl: 'https://demo.com',
+    featured: true
+  },
+  {
+    id: 7,
+    title: 'E-commerce Chatbot',
+    description: 'An intelligent chatbot built with n8n for product search, order management, and checkout automation.',
+    category: 'AI Automation',
+    techStack: ['n8n', 'Telegram API', 'Google Sheets', 'Supabase'],
+    image: 'https://images.pexels.com/photos/1591060/pexels-photo-1591060.jpeg?auto=compress&cs=tinysrgb&w=800',
+    githubUrl: 'https://github.com',
+    liveUrl: 'https://demo.com',
+    featured: true
+  },
+  {
+    id: 8,
+    title: 'Content Generator',
+    description: 'AI-driven content generation pipeline using n8n workflows for blogs, social media, and marketing copy.',
+    category: 'AI Automation',
+    techStack: ['n8n', 'OpenAI API', 'Google Docs', 'Zapier'],
+    image: 'https://images.pexels.com/photos/5483077/pexels-photo-5483077.jpeg?auto=compress&cs=tinysrgb&w=800',
+    githubUrl: 'https://github.com',
+    liveUrl: 'https://demo.com',
+    featured: false
+  },
+  {
+    id: 9,
+    title: 'Content Gen + Auto Twitter Posting',
+    description: 'Automates AI content creation and schedules posts directly to Twitter via n8n.',
+    category: 'AI Automation',
+    techStack: ['n8n', 'Twitter API', 'OpenAI API'],
+    image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
+    githubUrl: 'https://github.com',
+    liveUrl: 'https://demo.com',
+    featured: false
+  },
+  {
+    id: 10,
+    title: 'Lead Generation & Auto Mail',
+    description: 'Automated workflow that scrapes leads, enriches data, and sends personalized email campaigns.',
+    category: 'AI Automation',
+    techStack: ['n8n', 'SMTP', 'Google Sheets', 'OpenAI API'],
+    image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
+    githubUrl: 'https://github.com',
+    liveUrl: 'https://demo.com',
+    featured: false
+  },
+  {
+    id: 11,
+    title: 'Product View Assistance Bot',
+    description: 'LangChain-powered bot that helps users explore and understand product details in natural conversation.',
+    category: 'AI Automation',
+    techStack: ['LangChain', 'OpenAI API', 'VectorDB', 'Supabase'],
+    image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800',
+    githubUrl: 'https://github.com',
+    liveUrl: 'https://demo.com',
+    featured: false
+  },
+  {
+    id: 12,
+    title: 'NeoVersine - Frontend',
+    description: 'Modern frontend interface for Neoversine with smooth UI/UX, Tailwind styling, and responsive design.',
+    category: 'Frontend',
+    techStack: ['React', 'Tailwind CSS', 'TypeScript'],
+    image: 'https://images.pexels.com/photos/1591060/pexels-photo-1591060.jpeg?auto=compress&cs=tinysrgb&w=800',
+    githubUrl: 'https://github.com',
+    liveUrl: 'https://demo.com',
+    featured: true
+  }
+];
+
 
   const categories = ['All', 'Frontend', 'Backend', 'Fullstack', 'AI Automation'];
 

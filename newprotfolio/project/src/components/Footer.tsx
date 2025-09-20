@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: Mail, href: 'mailto:hello@example.com', label: 'Email' },
+    { icon: Github, href: 'https://github.com/karak02', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/ankonkarak/', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://x.com/AnkonKarak', label: 'Twitter' },
+    { icon: Mail, href: 'mailto:ankonkarak2002@gmail.com', label: 'Email' },
   ];
 
   return (

@@ -19,14 +19,24 @@ const Contact: React.FC = () => {
     setSubmitStatus('idle');
 
     try {
-      // Simulate API call - In a real app, you'd send this to your backend
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      console.log('Form submitted:', data);
-      setSubmitStatus('success');
-      reset();
-    } catch {
+      const response = await fetch("https://formspree.io/f/xgvlgzqb", { // Replace YOUR_FORMSPREE_ID with your actual Formspree form ID
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        reset();
+      } else {
+        setSubmitStatus('error');
+        console.error('Formspree submission error:', await response.json());
+      }
+    } catch (error) {
       setSubmitStatus('error');
+      console.error('Network or other error:', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -36,27 +46,27 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@example.com',
-      href: 'mailto:hello@example.com'
+      value: 'ankonkarak2002@gmail.com',
+      href: 'mailto:hello@ankonkarak2002@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+91 7980956460',
+      href: 'tel:+917980956460'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'jagannathpur,fuleswer,howrah,west bengal,india,pin-711316',
       href: '#'
     }
   ];
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+    { icon: Github, href: 'https://github.com/karak02', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/ankonkarak/', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://x.com/AnkonKarak', label: 'Twitter' },
   ];
 
   return (
@@ -194,7 +204,7 @@ const Contact: React.FC = () => {
                 </motion.div>
               )}
 
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" action="https://formspree.io/f/xgvlgzqb" method="POST"> {/* Replace YOUR_FORMSPREE_ID with your actual Formspree form ID */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Full Name
